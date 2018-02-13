@@ -219,7 +219,55 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\etc\_scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Holograms\AstroMan\SetRendererSettings.cs" />
+    <Compile Include="Assets\Holograms\Input\Scripts\CursorManager.cs" />
+    <Compile Include="Assets\Holograms\Input\Scripts\GazeManager.cs" />
+    <Compile Include="Assets\Holograms\Input\Scripts\GazeStabilizer.cs" />
+    <Compile Include="Assets\Holograms\Input\Scripts\GestureManager.cs" />
+    <Compile Include="Assets\Holograms\Input_gesture\Scripts\CursorFeedback.cs" />
+    <Compile Include="Assets\Holograms\Input_gesture\Scripts\GestureManager.cs" />
+    <Compile Include="Assets\Holograms\Input_gesture\Scripts\HandGuidance.cs" />
+    <Compile Include="Assets\Holograms\Input_gesture\Scripts\HandsManager.cs" />
+    <Compile Include="Assets\Holograms\Support\AniCrane\AnimationSpeed.cs" />
+    <Compile Include="Assets\Holograms\Support\Fitbox\Fitbox.cs" />
+    <Compile Include="Assets\Holograms\Support\Fitbox\Interpolator.cs" />
+    <Compile Include="Assets\Holograms\Support\Spatial Mapping\SpatialMapping.cs" />
+    <Compile Include="Assets\Holograms\Support\Underworld\UnderworldReset.cs" />
+    <Compile Include="Assets\Holograms\Support\Underworld\UnderworldSound.cs" />
+    <Compile Include="Assets\Holograms\Utilities\Scripts\Billboard.cs" />
+    <Compile Include="Assets\Holograms\Utilities\Scripts\DirectionIndicator.cs" />
+    <Compile Include="Assets\Holograms\Utilities\Scripts\Interpolator.cs" />
+    <Compile Include="Assets\Holograms\Utilities\Scripts\SimpleTagalong.cs" />
+    <Compile Include="Assets\Holograms\Utilities\Scripts\Singleton.cs" />
+    <Compile Include="Assets\Mario\_scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Mario\_scripts\Contol.cs" />
+    <Compile Include="Assets\Mario\_scripts\DismissOnSelect.cs" />
+    <Compile Include="Assets\Mario\_scripts\GazeGestureManager.cs" />
+    <Compile Include="Assets\Mario\_scripts\GestureAction.cs" />
+    <Compile Include="Assets\Mario\_scripts\Interactible.cs" />
+    <Compile Include="Assets\Mario\_scripts\InteractibleManager.cs" />
+    <Compile Include="Assets\Mario\_scripts\KeyBoardManager.cs" />
+    <Compile Include="Assets\Mario\_scripts\OrganScrollController.cs" />
+    <Compile Include="Assets\Mario\_scripts\SpeechManager.cs" />
+    <Compile Include="Assets\Mario\_scripts\WorldCursor.cs" />
+    <Compile Include="Assets\Mario\_scripts\WorldGaze.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Holograms\Utilities\Shaders\LambertianConfigurable.cginc" />
+    <None Include="Assets\Holograms\Utilities\Shaders\LambertianConfigurable.shader" />
+    <None Include="Assets\Holograms\Utilities\Shaders\LambertianConfigurableTransparent.shader" />
+    <None Include="Assets\Holograms\Utilities\Shaders\StandardFast.shader" />
+    <None Include="Assets\Holograms\Utilities\Shaders\UnlitConfigurable.cginc" />
+    <None Include="Assets\Holograms\Utilities\Shaders\UnlitConfigurable.shader" />
+    <None Include="Assets\Holograms\Utilities\Shaders\UnlitConfigurableTransparent.shader" />
+    <None Include="Assets\Holograms\Utilities\Shaders\VertexLitConfigurable.cginc" />
+    <None Include="Assets\Holograms\Utilities\Shaders\VertexLitConfigurable.shader" />
+    <None Include="Assets\Holograms\Utilities\Shaders\VertexLitConfigurableTransparent.shader" />
+    <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
+    <None Include="Assets\Resources\Shaders\SpecularHighlight.shader" />
+    <None Include="Assets\Resources\Shaders\StandardFastBackFaceCulling.shader" />
+    <None Include="Assets\Resources\Shaders\UITransparent.shader" />
+    <None Include="Assets\Shaders\Highlight.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

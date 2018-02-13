@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Hololens_scence1.unity
+- path: Assets/Mario/_scences/Hololens_scence1.unity
   isLoaded: 1
   isActive: 1
