@@ -106,7 +106,13 @@ public class CameraMovement : MonoBehaviour
         hMove = Input.GetAxisRaw("Horizontal");
         vMove = Input.GetAxisRaw("Vertical");
         move.Set(hMove, 0f, vMove);
-        Vector3 movement = Vector3.Cross(move, transform.forward) * moveSpeed * Time.deltaTime;
+        // @ Mario: the function eulerAngles can detedt the rotation angle comparing to the global axis. Reference: http://blog.csdn.net/lyh916/article/details/45952517
+        Vector3 rotation = Camera.main.transform.rotation.eulerAngles;
+        float y = Camera.main.transform.rotation.eulerAngles.y;
+        // @ Mario: Quaterion returns a rotation that rotates z degrees around the z axis, x degrees around the x axis, and y degrees around the y axis.
+        // movement = Quaternion.Euler(rotation) * movement; // This movement will not lock the movement on y axis.
+        move = Quaternion.Euler(0, y, 0) * move.normalized; // This movemenrt will lovk the movement on y axis.
+        Vector3 movement = move.normalized * moveSpeed * Time.deltaTime;
         transform.position += movement;
 
     }
