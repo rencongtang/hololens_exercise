@@ -9,20 +9,23 @@ public class CameraMovement : MonoBehaviour
 {
     // Variables
 
-    public float turnSpeed = 1.0f; // Speed of movement of the camera along an axis
-    public float panSpeed = 1.0f; // Speed of canera when being panned
-    public float zoomSpeed = 1.0f; // Speed of camera goes forth and back
+    public float turnSpeed = 6.0f; // Speed of movement of the camera along an axis
+    public float panSpeed = 6.0f; // Speed of canera when being panned
+    public float zoomSpeed = 6.0f; // Speed of camera goes forth and back
+    public float moveSpeed = 6.0f; // Speed of camera when being moved via inpiut keyboard 
 
     private Vector3 mouseOrigin; // Position of mouse when dragging begins 
     private bool isPanning; // Judge if the camera is being panning or not 
     private bool isRotating; // Judge if the camera being rotated or not
     private bool isZooming; // Judge if the camera being Zoomed or not
+    private float hMove; // The movement of horizaontal
+    private float vMove; // The movement of vertical
+    private Vector3 move; // The movement vector
 
 
     // Update
     void Update()
     {
-        Debug.Log(Input.mousePosition);
         // Get the lest mouse button
         if (Input.GetMouseButtonDown(0))
         {
@@ -51,29 +54,62 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetMouseButtonUp(1)) isPanning = false;
         if (Input.GetMouseButtonUp(2)) isZooming = false;
 
+        Rotating();
+        Panning();
+        Zooming();
+        Move();
+    }
+
+    void Rotating()
+    {
         if (isRotating)
         {
             // @ Mario: the ScreenToViewportPoint is a function that to transfer the position on the screen to world space.
             Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
-            transform.RotateAround(transform.position, transform.right, -pos.y * turnSpeed);
-            transform.RotateAround(transform.position, Vector3.up, pos.x * turnSpeed);
+            transform.RotateAround(transform.position, transform.right, -pos.y * turnSpeed * 10);
+            transform.RotateAround(transform.position, Vector3.up, pos.x * turnSpeed * 10);
+            // @ Mario: this setp makes the movement of camera keep stable, without the code below, the camera will keep moving until the user release the mouse button
+            mouseOrigin = Input.mousePosition;
         }
+    }
 
+    void Panning()
+    {
         if (isPanning)
         {
+            // @ Mario: the ScreenToViewportPoint is a function that to transfer the position on the screen to world space.
             Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
-            Debug.Log("Panning");
             Vector3 move = new Vector3(pos.x * panSpeed, pos.y * panSpeed, pos.z * panSpeed);
             transform.Translate(move, Space.Self);
+            // @ Mario: this setp makes the movement of camera keep stable, without the code below, the camera will keep moving until the user release the mouse button
+            mouseOrigin = Input.mousePosition;
         }
+    }
+
+    void Zooming()
+    {
 
         if (isZooming)
         {
+            // @ Mario: the ScreenToViewportPoint is a function that to transfer the position on the screen to world space.
             Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
-            Debug.Log("Panning");
-            Vector3 move = new Vector3(pos.x * panSpeed, pos.y * panSpeed, pos.z * panSpeed);
-            transform.Translate(move, Space.Self);
+            Vector3 move = pos.y * zoomSpeed * transform.forward;
+            transform.Translate(move, Space.World);
+            // @ Mario: this setp makes the movement of camera keep stable, without the code below, the camera will keep moving until the user release the mouse button
+            mouseOrigin = Input.mousePosition;
         }
     }
+
+    void Move()
+    {
+        Debug.Log("Move Begin" + transform.forward);
+        hMove = Input.GetAxisRaw("Horizontal");
+        vMove = Input.GetAxisRaw("Vertical");
+        move.Set(hMove, 0f, vMove);
+        Vector3 movement = Vector3.Cross(move, transform.forward) * moveSpeed * Time.deltaTime;
+        transform.position += movement;
+
+    }
+
 }
 
