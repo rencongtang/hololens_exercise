@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 681, y: 492}
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 47
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -66,12 +66,12 @@ MonoBehaviour:
     height: 731
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -90,8 +90,8 @@ MonoBehaviour:
     y: 0
     width: 327
     height: 423
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -207,10 +207,10 @@ MonoBehaviour:
     y: 0
     width: 1088
     height: 731
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 48
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,10 +231,10 @@ MonoBehaviour:
     y: 0
     width: 1088
     height: 423
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 49
+  controlID: 11
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,7 +346,7 @@ MonoBehaviour:
     width: 1086
     height: 287
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: tag
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -357,19 +357,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Mario/_scripts
+    - Assets/Holograms
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Mario/_scripts
+  - Assets/Holograms
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity Projects\Hololens tutorial
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7c270000
-    m_LastClickedID: 10108
-    m_ExpandedIDs: 0000000034270000462700004e3900005239000068390000a4390000ec39000000ca9a3bffffff7f
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000bc2c00000a2d0000562d0000662e0000642f0000ea2f0000ec2f00005e3c0000603c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -397,7 +397,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003427000046270000
+    m_ExpandedIDs: 00000000bc2c0000142d0000562d0000662e0000642f0000ea2f0000ec2f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -425,21 +425,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000082280000fcb7ffffa02d00007a2b0000000000000a360000
+    m_ExpandedInstanceIDs: c623000082280000fcb7ffffa02d00007a2b0000000000000a360000102d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: InteractibleAction
+      m_OriginalName: InteractibleAction
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 15640
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -513,20 +513,20 @@ MonoBehaviour:
     height: 402
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 26befeff
-    m_LastClickedID: -82394
-    m_ExpandedIDs: 369afeff9efbffff00000000
+    m_SelectedIDs: d8e4fcff
+    m_LastClickedID: -203560
+    m_ExpandedIDs: 9ee6fcffd0e6fcffba6afeffbc6afeffc26afeffc66afefff66afeff026bfefffe6bfeff0a6cfeff1a6cfeff7a6cfeffa66cfeff46dfffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: CursorOffHolograms
-      m_OriginalName: CursorOffHolograms
+      m_Name: Spine1Part1_Center
+      m_OriginalName: Spine1Part1_Center
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -91590
+      m_UserData: -103738
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -565,14 +565,14 @@ MonoBehaviour:
     width: 757
     height: 402
   m_SceneLighting: 1
-  lastFramingTime: 3664.5996560408844
+  lastFramingTime: 29979.039879400978
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.774231, y: 0.12957764, z: -5.461914}
+    m_Target: {x: 0.00031847134, y: 0.031515457, z: 1.9014975}
     speed: 2
-    m_Value: {x: -1.774231, y: 0.12957764, z: -5.461914}
+    m_Value: {x: 0.00031847134, y: 0.031515457, z: 1.9014975}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -587,21 +587,21 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
+      m_Target: 1
       speed: 2
-      m_Value: 0
+      m_Value: 1
     zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.00085449294, y: -0.99826425, z: 0.014975108, w: 0.056962777}
+    m_Target: {x: 0.13689046, y: 0.17377116, z: -0.02440382, w: 0.97492385}
     speed: 2
-    m_Value: {x: 0.0008544924, y: -0.99826366, z: 0.014975099, w: 0.056962743}
+    m_Value: {x: 0.13688995, y: 0.17377052, z: -0.02440373, w: 0.9749203}
   m_Size:
-    m_Target: 8.975415
+    m_Target: 0.1875576
     speed: 2
-    m_Value: 8.975415
+    m_Value: 0.1875576
   m_Ortho:
     m_Target: 1
     speed: 2

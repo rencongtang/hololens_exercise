@@ -246,11 +246,11 @@
     <Compile Include="Assets\Mario\_scripts\GestureAction.cs" />
     <Compile Include="Assets\Mario\_scripts\Interactible.cs" />
     <Compile Include="Assets\Mario\_scripts\InteractibleManager.cs" />
-    <Compile Include="Assets\Mario\_scripts\KeyBoardManager.cs" />
-    <Compile Include="Assets\Mario\_scripts\OrganScrollController.cs" />
     <Compile Include="Assets\Mario\_scripts\SpeechManager.cs" />
     <Compile Include="Assets\Mario\_scripts\WorldCursor.cs" />
     <Compile Include="Assets\Mario\_scripts\WorldGaze.cs" />
+    <Compile Include="Assets\Scripts\DismissOnSelect.cs" />
+    <Compile Include="Assets\Scripts\InteractibleAction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Holograms\Utilities\Shaders\LambertianConfigurable.cginc" />

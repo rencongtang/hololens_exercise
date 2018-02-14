@@ -8,7 +8,6 @@ using UnityEngine;
 public class InteractibleManager : Singleton<InteractibleManager>
 {
     public GameObject FocusedGameObject { get; private set; }
-    public GameObject Parent;
 
     private GameObject oldFocusedGameObject = null;
 
@@ -30,7 +29,6 @@ public class InteractibleManager : Singleton<InteractibleManager>
             {
                 // 2.c: Assign the hitInfo's collider gameObject to the FocusedGameObject.
                 FocusedGameObject = hitInfo.collider.gameObject;
-                Parent = FocusedGameObject.transform.parent.gameObject;
 
             }
             else
@@ -57,11 +55,6 @@ public class InteractibleManager : Singleton<InteractibleManager>
             }
         }
     }
-
-    public GameObject GetParent()
-    {
-        return Parent;
-    } 
 
     public GameObject GetTarget()
     {
